@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos Barra de Navegación */
+header.main-nav {
+    background-color: #3C8D68;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Barra de Búsqueda centrada y alargada */
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.barra-busqueda input {
+    width: 500px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Ajuste del botón de búsqueda */
+.barra-busqueda button {
+    padding: 4.5px 8px;
+    background-color: #1C5D99;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Iconos derecha del menú */
+.iconos-derecha {
+    display: flex;
+    gap: 15px;
+}
+
+.sub-nav {
+    background-color: #2E594F;
+    padding: 10px 0;
+}
+
+.sub-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sub-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilos para la tabla de productos */
+section.productos {
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+table.display {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.display th, table.display td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table.display thead {
+    background-color: #3C8D68;
+    color: white;
+}
+
+table.display tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
