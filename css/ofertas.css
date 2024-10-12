@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos Barra de Navegación */
+header.main-nav {
+    background-color: #3C8D68;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Barra de Búsqueda centrada y alargada */
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.barra-busqueda input {
+    width: 500px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Ajuste del botón de búsqueda */
+.barra-busqueda button {
+    padding: 4.5px 8px;
+    background-color: #1C5D99;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Iconos derecha del menú */
+.iconos-derecha {
+    display: flex;
+    gap: 15px;
+}
+
+.sub-nav {
+    background-color: #2E594F;
+    padding: 10px 0;
+}
+
+.sub-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sub-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Estilos de las Ofertas */
+.ofertas {
+    padding: 20px;
+}
+.promocion {
+    background-color: #ffffff; /* Fondo blanco para mantenerlo limpio */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.promocion.hover {
+    background-color: #d9eaf7; /* Fondo azul claro */
+    border-color: #3C8D68;    /* Borde azul oscuro acorde a la página */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+}
+
+.promocion h2 {
+    transition: color 0.3s ease-in-out;
+}
+
+.promocion.hover h2 {
+    color: #3C8D68; /* Color azul oscuro para el título en hover */
+}
+.carrusel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.imagen-oferta {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.prev {
+    left: -50px;
+}
+
+button.next {
+    right: -50px;
+}
+
+h1 {
+    text-align: center;
+    color: #3C8D68;
+}
+
+.contador {
+    font-weight: bold;
+    font-size: 16px;
+    color: #d9534f;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #1C5D99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3C8D68;
+}
+
+.favorito {
+    background-color: gold;
+    color: black;
+}

@@ -23,3 +23,4 @@ function actualizarTotal() {
     // Actualizar el total del carrito (si tienes un campo para el total)
     document.getElementById('total-carrito').innerText = `Total Carrito: $${totalCarrito.toFixed(2)}`;
 }
+
