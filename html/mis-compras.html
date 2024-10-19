@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promociones y Ofertas Especiales</title>
-    <link rel="stylesheet" href="/css/ofertas.css"> <!-- Enlace al archivo de estilos -->
+    <title>Mis Compras</title>
+    <link rel="stylesheet" href="/css/mis-compras.css"> <!-- Enlace al archivo de estilos -->
 </head>
 <body>
     <header class="main-nav">
@@ -61,37 +61,37 @@
         </ul>
     </nav>
 
-    <!-- Sección de Ofertas Especiales -->
-    <section class="ofertas">
-        <h1>Promociones y Ofertas Especiales</h1>
+    <!-- Sección de Mis Compras -->
+    <section class="productos">
+        <h1>Mis Compras</h1>
+
+        <div class="producto">
+            <img src="/img/corsair k65.jpg" alt="Teclado Corsair K61">
+            <h2>Teclado Gamer Corsair K65</h2>
+            <p class="descripcion">Teclado mecánico con switches Cherry MX Red, retroiluminación RGB y construcción duradera.</p>
+            <p class="precio">$99.99 USD</p>
+
+            <!-- Botones de acciones -->
+            <button class="eliminar-btn">Eliminar Compra</button>
+            <button class="recibido-btn">Marcar como Recibido</button>
+            <button class="estado-envio-btn">Cambiar Estado de Envío</button>
+        </div>
+
+        <div class="producto">
+            <img src="/img/grafica asus.png" alt="Gráfica 4090 Super">
+            <h2>Tarjeta Gráfica RTX 4090 Super</h2>
+            <p class="descripcion">La tarjeta gráfica más potente de Nvidia, perfecta para gaming en 4K y renderizado 3D.</p>
+            <p class="precio">$1,799.99 USD</p>
+
+            <!-- Botones de acciones -->
+            <button class="eliminar-btn">Eliminar Compra</button>
+            <button class="recibido-btn">Marcar como Recibido</button>
+            <button class="estado-envio-btn">Cambiar Estado de Envío</button>
+        </div>
         
-        <!-- Carrusel de Imágenes -->
-        <div class="carrusel">
-            <img src="/img/813972-800-auto.webp" alt="Snacks" id="carrusel-img" class="imagen-oferta">
-            <button class="prev" onclick="prevImage()">&#10094;</button>
-            <button class="next" onclick="nextImage()">&#10095;</button>
-        </div>
-
-        <div class="promocion">
-            <div class="contenido-oferta">
-                <h2>Descuento 50% en Snacks</h2>
-                <p>Válido hasta: 31 de octubre</p>
-                <div id="contador1" class="contador"></div>
-                <button>Ver más detalles</button>
-                <button class="favorito" onclick="toggleFavorito(this)">&#9733; Añadir a Favoritos</button>
-            </div>
-        </div>
-
-        <div class="promocion">
-            <div class="contenido-oferta">
-                <h2>3x2 en Bebidas Energéticas</h2>
-                <p>Válido hasta: 15 de noviembre</p>
-                <div id="contador2" class="contador"></div>
-                <button>Ver más detalles</button>
-                <button class="favorito" onclick="toggleFavorito(this)">&#9733; Añadir a Favoritos</button>
-            </div>
-        </div>
+        <!-- Agregar más productos si es necesario -->
     </section>
-    <script src="/Js/ofertas.js"></script> <!-- Enlace al archivo de JavaScript -->
+
+    <script src="/Js/mis-compras.js"></script> <!-- Enlace al archivo de JavaScript -->
 </body>
 </html>
