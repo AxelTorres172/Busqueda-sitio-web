@@ -1,16 +1,26 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe y recargue la página
+    event.preventDefault();
 
-    // Obtiene los valores de usuario y contraseña
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    const errorMsg = document.getElementById('errorMsg');
 
-    // Validación de credenciales (ejemplo simple)
-    if (username === 'Axelrt' && password === '12345') {
+    // Definimos los usuarios y sus roles
+    const users = {
+        admin: { username: 'Axelrt', password: 'admin123', role: 'admin' },
+        normal: { username: 'user', password: 'user123', role: 'normal' }
+    };
+
+    // Validación de credenciales
+    if (username === users.admin.username && password === users.admin.password) {
         alert('Inicio de sesión correcto. Redirigiendo al inicio...');
-        window.location.href = '/html/index.html'; // Redirige a la página de inicio
+        localStorage.setItem('role', users.admin.role); // Guardamos el rol en localStorage
+        window.location.href = '/html/index.html'; // Redirigimos a index.html
+    } else if (username === users.normal.username && password === users.normal.password) {
+        alert('Inicio de sesión correcto. Redirigiendo al inicio...');
+        localStorage.setItem('role', users.normal.role); // Guardamos el rol en localStorage
+        window.location.href = '/html/index.html'; // Redirigimos a index.html
     } else {
-        // Si las credenciales son incorrectas, muestra un mensaje de error
-        document.getElementById('errorMsg').innerText = 'Usuario o contraseña incorrectos';
+        errorMsg.innerText = 'Usuario o contraseña incorrectos';
     }
 });
