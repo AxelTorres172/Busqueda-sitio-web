@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles-admin.css">
+    <title>Vista Administrador</title>
+    <script src="redirect.js"></script>
+</head>
+<body onload="redirectUser('admin')">
+    <!-- Encabezado con elementos específicos de administrador -->
+    <header class="main-nav">
+        <div class="logo">
+            <img src="/img/image-removebg-preview.png" alt="Logo" width="60" height="60">
+        </div>
+        <div class="barra-busqueda">
+            <input type="text" placeholder="Buscar en el panel...">
+            <button class="buscar" type="submit">Buscar</button>
+        </div>
+        <div class="iconos-derecha">
+            <button onclick="openSettings()">Configuración</button>
+            <button onclick="logout()">Cerrar Sesión</button>
+        </div>
+    </header>
+    
+    <!-- Navegación con enlaces de administración -->
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="#">Gestión de Usuarios</a></li>
+            <li><a href="#">Reportes y Análisis</a></li>
+            <li><a href="#">Control de Inventario</a></li>
+            <li><a href="#">Configuración del Sistema</a></li>
+            <li><a href="#">Panel de Auditoría</a></li>
+        </ul>
+    </nav>
+
+    <!-- Panel de control exclusivo de administrador -->
+    <section class="admin-dashboard">
+        <h2>Panel de Administración</h2>
+        <div class="admin-widgets">
+            <div class="widget">
+                <h3>Usuarios Activos</h3>
+                <p>Total: 1023</p>
+                <button onclick="viewUsers()">Ver Usuarios</button>
+            </div>
+            <div class="widget">
+                <h3>Ventas del Día</h3>
+                <p>$50,000 MXN</p>
+                <button onclick="viewSales()">Ver Ventas</button>
+            </div>
+            <div class="widget">
+                <h3>Inventario Bajo</h3>
+                <p>15 productos en alerta</p>
+                <button onclick="viewInventory()">Revisar Inventario</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de reportes y estadísticas -->
+    <section class="reports-section">
+        <h2>Reportes y Estadísticas</h2>
+        <div class="report">
+            <h3>Reporte de Ventas Mensuales</h3>
+            <canvas id="monthlySalesChart" width="400" height="200"></canvas>
+        </div>
+        <div class="report">
+            <h3>Reporte de Usuarios Activos</h3>
+            <canvas id="activeUsersChart" width="400" height="200"></canvas>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Ejemplo de gráfico de ventas mensuales
+        const ctxSales = document.getElementById('monthlySalesChart').getContext('2d');
+        new Chart(ctxSales, {
+            type: 'bar',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                datasets: [{
+                    label: 'Ventas en MXN',
+                    data: [12000, 15000, 8000, 6000, 10000, 20000],
+                    backgroundColor: 'rgba(60, 141, 104, 0.5)',
+                    borderColor: 'rgba(60, 141, 104, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Ejemplo de gráfico de usuarios activos
+        const ctxUsers = document.getElementById('activeUsersChart').getContext('2d');
+        new Chart(ctxUsers, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
+                datasets: [{
+                    label: 'Usuarios Activos',
+                    data: [50, 60, 70, 90, 100, 120],
+                    backgroundColor: 'rgba(28, 93, 153, 0.5)',
+                    borderColor: 'rgba(28, 93, 153, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Funciones de ejemplo
+        function viewUsers() {
+            alert('Redirigiendo a la gestión de usuarios...');
+        }
+
+        function viewSales() {
+            alert('Redirigiendo al reporte de ventas...');
+        }
+
+        function viewInventory() {
+            alert('Redirigiendo a la gestión de inventario...');
+        }
+
+        function openSettings() {
+            alert('Abriendo configuración...');
+        }
+
+        function logout() {
+            alert('Cerrando sesión...');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
