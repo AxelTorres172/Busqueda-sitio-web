@@ -1,0 +1,180 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3c8d68;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+header .logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.barra-busqueda input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.barra-busqueda .buscar {
+    padding: 8px 16px;
+    border: none;
+    background-color: #285946;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.barra-busqueda .buscar:hover {
+    background-color: #2d624e;
+}
+
+.iconos-derecha button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: #285946;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iconos-derecha button:hover {
+    background-color: #2d624e;
+}
+
+/* Estilos para la navegación secundaria */
+nav.sub-nav {
+    background-color: #285946;
+    padding: 10px 20px;
+}
+
+nav.sub-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav.sub-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #3c8d68;
+}
+
+nav.sub-nav ul li a:hover {
+    background-color: #2d624e;
+}
+
+/* Panel de administración */
+.admin-dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.admin-dashboard h2 {
+    margin-bottom: 20px;
+    color: #285946;
+    text-align: center;
+}
+
+.admin-widgets {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.widget {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.widget h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.widget p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.widget button {
+    padding: 8px 12px;
+    background-color: #285946;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.widget button:hover {
+    background-color: #3c8d68;
+}
+
+/* Estilos para la sección de reportes */
+.reports-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.reports-section h2 {
+    text-align: center;
+    color: #285946;
+    margin-bottom: 20px;
+}
+
+.report {
+    margin-bottom: 20px;
+}
+
+.report h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los gráficos */
+canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilos de botón */
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4d36;
+}
